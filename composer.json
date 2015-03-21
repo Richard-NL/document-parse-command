@@ -1,0 +1,21 @@
+{
+    "require": {
+        "silex/silex": "~1.2",
+        "igorw/config-service-provider": "1.2.*",
+        "symfony/console": "~2.6",
+        "phpoffice/phpword": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {"Rsh\\": "src/"}
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "chmod 777 app/cache",
+            "chmod 777 app/logs"
+        ],
+        "post-update-cmd": [
+            "chmod 777 app/cache",
+            "chmod 777 app/logs"
+        ]
+    }
+}
